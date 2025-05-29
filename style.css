@@ -1,0 +1,94 @@
+    :root {
+      --bgMain: #ffffff;
+      --bgSub: #f4f4f4;
+      --bgButton: #e0e0e0;
+      --textMain: #000000;
+      --textHighlight: #1e90ff;
+      --buttonMain: #007bff;
+      --textContrast: #0056b3;
+    }
+
+    body {
+      background-color: var(--bgMain);
+      color: var(--textMain);
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: var(--bgSub);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .headerTitle {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--textHighlight);
+    }
+
+    .container1 {
+      padding: 2rem;
+      background-color: var(--bgMain);
+      text-align: center;
+    }
+
+    .container1 h1 span,
+    .container1 p span {
+      color: var(--textHighlight);
+      font-weight: bold;
+    }
+
+    .buttonExp, .btn-primary {
+      background-color: var(--buttonMain);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .container2 {
+      background-color: var(--bgSub);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .feature {
+      background-color: var(--bgSub);
+      padding: 1rem;
+      flex: 1 1 30%;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .feature i {
+      font-size: 2rem;
+      color: var(--textHighlight);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      background-color: var(--bgButton);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--bgSub);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer nav a {
+      margin: 0 1rem;
+      color: var(--textContrast);
+      text-decoration: none;
+    }
