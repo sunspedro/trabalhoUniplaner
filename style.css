@@ -4,7 +4,7 @@
   --darkBg: #0056b3;
   --accentColor: #007bff;
   --highlightColor: #ffe600;
-  --footerBg: #0056b3;
+  --footerBg: #000;
   --footerLight: #ccc;
   --whiteColor: #ffffff;
   --textColor: #333333;
@@ -70,6 +70,7 @@ body {
 .buttonExp:hover {
   background-color: var(--accentColor);
   color: var(--whiteColor);
+  cursor: pointer;
 }
 .section {
   padding: 4rem 2rem;
@@ -184,11 +185,12 @@ body {
   border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 .btnDownload:hover {
   background-color: var(--darkBg);
   color: var(--whiteColor);
+  cursor: pointer;
 }
 .footer {
   background-color: var(--footerBg);
