@@ -1,174 +1,158 @@
 :root {
-  --mainColor: #1e90ff;
-  --lightBg: #f9f9f9;
-  --darkBg: #0056b3;
-  --accentColor: #007bff;
-  --highlightColor: #ffe600;
-  --footerBg: #000;
-  --footerLight: #ccc;
-  --whiteColor: #ffffff;
-  --textColor: #333333;
-  --shadowColor: rgba(0, 0, 0, 0.1);
+  --main-color: #1e90ff;
+  --accent-color: #007bff;
+  --dark-bg: #0056b3;
+  --light-bg: #f9f9f9;
+  --highlight-color: #ffe600;
+  --footer-bg: #000000;
+  --footer-light: #cccccc;
+  --white: #ffffff;
+  --text-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --border-radius: 0.625rem;
 }
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--lightBg);
-  color: var(--textColor);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.mainHeader {
-  background-color: var(--darkBg);
-  color: white;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+html{
+  scroll-behavior: smooth;
 }
-.headerTitle {
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+.mainHeader {
+  background-color: var(--dark-bg);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  z-index: 1000;
+}
+.navbar-brand {
   font-size: 1.75rem;
 }
-.headerNav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.headerNav a:hover {
-  color: var(--highlightColor);
-}
 .hero {
-  padding: 6rem 2rem;
-  background: linear-gradient(to right, var(--mainColor), #00bfff);
-  color: var(--whiteColor);
-  text-align: center;
+  min-height: 70vh;
+  background: linear-gradient(to right, var(--main-color), #00bfff);
+  padding: 5rem 1rem;
 }
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
-.hero h1 span {
-  color: var(--highlightColor);
+.hero .highlight {
+  color: var(--highlight-color);
 }
 .hero p {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
-.buttonExp {
-  background-color: var(--whiteColor);
-  color: var(--accentColor);
+.hero .btn-light {
+  background-color: var(--white);
+  color: var(--accent-color);
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: 0.3s ease;
-  cursor: pointer;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
-.buttonExp:hover {
-  background-color: var(--accentColor);
-  color: var(--whiteColor);
-  cursor: pointer;
-}
-.introduction{
-  display: flex;
-  flex-direction: column;
-}
-.introductionContainer{
-  display: flex;
-  margin: 10px;
-  color: var(--whiteColor);  
-  flex-direction: column;
-  justify-content: center;
-  min-height: 10vw;
-  align-items: center;
-  text-align: center;
-  border-radius: 12px;
-  background-color: var(--accentColor);
-  transition: 0.5s ease;
-}
-.introductionContainer:hover{
-  background-color: var(--darkBg);
-  color: var(--highlightColor);
-  box-shadow: 0 6px 12px var(--shadowColor);
-}
-.introTitle{
-  font-size: 32px;
+.hero .btn-light:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
 }
 .section {
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 4rem 1rem;
 }
-.bgLight {
-  background-color: var(--lightBg);
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--main-color);
 }
-.bgWhite {
-  background-color: var(--whiteColor);
+.introduction-card {
+  background-color: var(--accent-color);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transition-speed), transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
-.features .fa-solid {
-  font-size: 2rem;
-  color: var(--mainColor);
-  margin-bottom: 1rem;
+.introduction-card:hover {
+  background-color: var(--dark-bg);
+  color: var(--highlight-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
-.features .card {
+.introTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.features-card {
   border: none;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px var(--shadowColor);
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-.features .card:hover {
+.features-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px var(--shadowColor);
+  box-shadow: 0 6px 12px var(--shadow-color);
 }
-.featuresImage{
-  border-radius: 20px;
+.features-card i {
+  font-size: 2rem;
+  color: var(--main-color);
 }
-.testimonials {
-  padding: 4rem 2rem;
-  background-color: var(--whiteColor);
-  text-align: center;
-  position: relative;
-}
-.testimonials h2 {
-  font-size: 2.25rem;
-  margin-bottom: 2rem;
-  color: var(--mainColor);
+.featuresImage {
+  border-radius: 1.25rem; /* 20px */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto 0;
 }
 .testimonialsWrapper {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
 }
 .testimonialCard {
   flex: 0 0 80%;
   max-width: 400px;
-  background-color: var(--lightBg);
-  border-radius: 1rem;
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
   padding: 2rem;
-  box-shadow: 0 6px 20px var(--shadowColor);
+  box-shadow: 0 6px 20px var(--shadow-color);
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.quote {
+.testimonialCard blockquote {
   font-style: italic;
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
-.author {
+.testimonialCard figcaption {
   font-weight: 600;
-  color: var(--mainColor);
+  color: var(--main-color);
+  align-self: flex-end;
 }
 .cta {
+  background-color: var(--main-color);
   position: relative;
   overflow: hidden;
-  padding: 4rem 2rem;
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
-  text-align: center;
+  color: var(--white);
+  padding: 4rem 1rem;
 }
 .cta::before,
 .cta::after {
@@ -181,21 +165,25 @@ body {
 .cta::before {
   width: 300px;
   height: 300px;
-  background: #ffe600;
+  background: var(--highlight-color);
   top: -50px;
   left: -100px;
 }
 .cta::after {
   width: 400px;
   height: 400px;
-  background: #fff;
+  background: var(--white);
   bottom: -150px;
   right: -150px;
   animation-duration: 10s;
 }
 @keyframes float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50%      { transform: translateY(20px) scale(1.05); }
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(20px) scale(1.05);
+  }
 }
 .cta h3 {
   font-size: 2rem;
@@ -205,42 +193,35 @@ body {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
-.btnDownload {
-  display: inline-block;
-  background-color: var(--whiteColor);
-  color: var(--mainColor);
+.cta .btn-light {
+  background-color: var(--white);
+  color: var(--main-color);
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   font-weight: 600;
-  text-decoration: none;
-  transition: 0.5s ease;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
-.btnDownload:hover {
-  background-color: var(--darkBg);
-  color: var(--whiteColor);
-  cursor: pointer;
+.cta .btn-light:hover {
+  background-color: var(--dark-bg);
+  color: var(--white);
 }
 .footer {
-  background-color: var(--footerBg);
-  color: var(--whiteColor);
-  padding: 4rem 2rem;
+  background-color: var(--footer-bg);
+  color: var(--white);
 }
 .footer h5 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 .footer a {
-  color: var(--footerLight);
   text-decoration: none;
 }
-.footer a:hover {
-  text-decoration: underline;
-  color: var(--highlightColor);
+.footer-link:hover{
+  color: var(--highlight-color);
 }
-.socialIcons a {
-  color: var(--whiteColor);
-  margin-right: 0.5rem;
+.footer .socialIcons a {
   font-size: 1.2rem;
+  margin-right: 0.5rem;
 }
 .newsletterForm .form-control {
   border-radius: 0.375rem 0 0 0.375rem;
@@ -252,38 +233,48 @@ body {
   .testimonialCard {
     flex: 0 0 45%;
   }
-  .featuresContainer{
+  .features-card {
     min-height: 220px;
-    flex-wrap: wrap;
   }
-  .introductionContainer{
-    min-width: 30vw;
-    flex-wrap: wrap;
+  .introduction-card {
+    min-height: 220px;
   }
 }
-@media (max-width: 768px){
-  .featuresContainer{
-    margin: 20px;
+@media (max-width: 576px) {
+  .introTitle {
+    font-size: 1.5rem;
+  }
+  .introduction-card {
+    min-height: 180px;
+    padding: 1.5rem;
   }
 }
-@media (max-width: 1024px){
-  .featuresContainer{
-    margin: 20px;
-    min-width: 480px;
-    min-height: 480px;
-  }
-  .featuresContainerMain{
-    display: flex;
+@media (max-width: 768px) {
+  .testimonialsWrapper {
     flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-snap-type: none;
   }
-
+  .testimonialCard {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .features-card {
+    width: 90%;
+    margin: 1rem auto;
+    min-height: unset;
+  }
 }
 @media (min-width: 1024px) {
   .testimonialCard {
     flex: 0 0 30%;
   }
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .hero p {
     font-size: 1.5rem;

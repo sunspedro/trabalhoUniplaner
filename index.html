@@ -3,154 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uniplaner</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Uniplaner - Seu calendário pessoal de estudos. Organize rotina, acompanhe progresso e acesse aulas exclusivas direto do app." />
+  <title>Uniplaner – App de Estudos com Cronograma e Aulas Exclusivas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/db5bcec5a5.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body onload="AOS.init()">
-  <header class="mainHeader d-flex justify-content-between align-items-center px-4 py-3">
-    <p class="headerTitle m-0">Uniplaner</p>
-    <nav class="headerNav d-none d-md-flex gap-4">
-      <a href="#download">Download</a>
-      <a href="#features">Funcionalidades</a>
-      <a href="#testimonials">Depoimentos</a>
-      <a href="https://wa.me/54984036584/?text=Ola" target="_blank">Contato</a>
-    </nav>
-    <div class="dropdown d-md-none">
-      <button class="btn text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+<body>
+  <header class="mainHeader navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Uniplaner</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="#download">Download</a></li>
-        <li><a class="dropdown-item" href="#features">Funcionalidades</a></li>
-        <li><a class="dropdown-item" href="#testimonials">Depoimentos</a></li>
-        <li><a class="dropdown-item" href="https://wa.me/54984036584/?text=Ola" target="_blank"">Contato</a></li>
-      </ul>
+      <nav class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Depoimentos</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wa.me/54984036584/?text=Ola" target="_blank" rel="noopener">Contato</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <section class="hero" data-aos="fade-up">
-    <h1>Seu <span>calendário pessoal</span> de estudos!</h1>
-    <p class="mt-3">Organize sua rotina, acompanhe seu progresso e acesse <strong>aulas exclusivas</strong> direto do app.</p>
-    <a href="#download">
-      <button class="buttonExp">Experimente agora</button>
-    </a>
-  </section>
-  <section class="section introduction bgLight" data-aos="fade-up">
-    <h2>Como funciona?</h2>
-    <div class="row justify-content-center  p-5">
-      <div class="col-md-3 introductionContainer">
-        <h5 class="mt-2 introTitle">Organize</h5>
-        <p>Monte seu cronograma de estudos em poucos passos.</p>
-      </div>
-      <div class="col-md-3 introductionContainer">
-        <h5 class="mt-2 introTitle">Acompanhe</h5>
-        <p>Veja seu progresso e mantenha a motivação em alta.</p>
-      </div>
-      <div class="col-md-3 introductionContainer">
-        <h5 class="mt-2 introTitle">Aprenda</h5>
-        <p>Assista aulas com professores qualificados.</p>
-      </div>
-    </div>
-  </section>
-  <section class="section features bgWhite" data-aos="fade-up">
-    <h2>Por que escolher o Uniplaner?</h2>
-    <div class="row featuresContainerMain mt-4">
-      <div class="col-md-4">
-        <div class="card p-4 featuresContainer">
-          <i class="fa-solid fa-headset"></i>
-          <h5>Suporte humanizado</h5>
-          <p>Atendimento com empatia para resolver suas dúvidas.</p>
-          <img class="featuresImage" src="imgs/features-1.webp" alt="foto do App">
+  <main class="pt-5">
+    <section class="hero d-flex flex-column justify-content-center align-items-center text-center text-white"
+      data-aos="fade-up">
+      <h1 class="display-4 fw-bold">Seu <span class="highlight">calendário pessoal</span> de estudos!</h1>
+      <p class="lead mt-3">Organize sua rotina, acompanhe seu progresso e acesse <strong>aulas exclusivas</strong> direto do app.</p>
+      <a href="#download">
+        <button class="btn btn-light btn-lg mt-3">Experimente agora</button>
+      </a>
+    </section>
+    <section id="introduction" class="section bg-light py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-5 text-primary">Como funciona?</h2>
+        <div class="row gx-4 gy-4 justify-content-center">
+          <article class="col-sm-6 col-md-4">
+            <div class="card introduction-card text-center p-4 h-100">
+              <h5 class="introTitle mb-2">Organize</h5>
+              <p class="mb-0">Monte seu cronograma de estudos de forma prática e personalizada, adaptando-o à sua rotina e metas específicas.</p>
+            </div>
+          </article>
+          <article class="col-sm-6 col-md-4">
+            <div class="card introduction-card text-center p-4 h-100">
+              <h5 class="introTitle mb-2">Acompanhe</h5>
+              <p class="mb-0">Monitore seu progresso com relatórios claros e motivadores, mantendo o foco e a consistência nos seus estudos.</p>
+            </div>
+          </article>
+          <article class="col-sm-6 col-md-4">
+            <div class="card introduction-card text-center p-4 h-100">
+              <h5 class="introTitle mb-2">Aprenda</h5>
+              <p class="mb-0">Acesse conteúdos de qualidade com professores qualificados, em aulas dinâmicas e voltadas para a sua evolução.</p>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-4 featuresContainer">
-          <i class="fa-solid fa-user-tie"></i>
-          <h5>Professores experientes</h5>
-          <p>Equipe dedicada à sua aprendizagem.</p>
-          <img class="featuresImage" src="imgs/features-2.webp" alt="foto do App">
+    </section>
+    <section id="features" class="section bg-white py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center text-primary mb-5">Por que escolher o Uniplaner?</h2>
+        <div class="row gx-4 gy-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card features-card shadow-sm h-100 text-center p-4">
+              <i class="fa-solid fa-headset fa-2x text-primary mb-3" aria-hidden="true"></i>
+              <h5 class="fw-semibold">Suporte humanizado</h5>
+              <p>Nosso atendimento é realizado por pessoas reais, com empatia e dedicação, para esclarecer dúvidas e garantir a melhor experiência possível.</p>
+              <img class="featuresImage img-fluid mt-3" src="imgs/features-1.webp" alt="Imagem de atendimento ao cliente">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card features-card shadow-sm h-100 text-center p-4">
+              <i class="fa-solid fa-user-tie fa-2x text-primary mb-3" aria-hidden="true"></i>
+              <h5 class="fw-semibold">Professores experientes</h5>
+              <p>Nossa equipe é composta por profissionais qualificados, com vasta experiência no ensino, sempre prontos para orientar e motivar sua jornada.</p>
+              <img class="featuresImage img-fluid mt-3" src="imgs/features-2.webp" alt="Imagem de professores">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card features-card shadow-sm h-100 text-center p-4">
+              <i class="fa-solid fa-mobile fa-2x text-primary mb-3" aria-hidden="true"></i>
+              <h5 class="fw-semibold">Interface intuitiva</h5>
+              <p>Tenha acesso rápido e descomplicado a todos os recursos da plataforma, com um design responsivo que funciona perfeitamente em qualquer dispositivo.</p>
+              <img class="featuresImage img-fluid mt-3" src="imgs/features-3.webp" alt="Imagem de interface móvel">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-4 featuresContainer">
-          <i class="fa-solid fa-mobile"></i>
-          <h5>Interface intuitiva</h5>
-          <p>Fácil de usar em qualquer dispositivo.</p>
-          <img class="featuresImage" src="imgs/features-3.webp" alt="foto do App">
+    </section>
+    <section id="testimonials" class="section bg-white py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center text-primary mb-5">Depoimentos</h2>
+        <div class="testimonialsWrapper d-flex gap-4 overflow-auto pb-3">
+          <div class="testimonialCard p-4 shadow-sm bg-light">
+            <blockquote class="blockquote mb-2">
+              <p>“O Uniplaner salvou minha rotina antes do vestibular!”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-primary">João, 17 anos</figcaption>
+          </div>
+          <div class="testimonialCard p-4 shadow-sm bg-light">
+            <blockquote class="blockquote mb-2">
+              <p>“Fácil de usar e com conteúdo incrível. Recomendo!”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-primary">Ana, 19 anos</figcaption>
+          </div>
+          <div class="testimonialCard p-4 shadow-sm bg-light">
+            <blockquote class="blockquote mb-2">
+              <p>“A interface intuitiva me ajudou a manter tudo sob controle.”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-primary">Carlos, 20 anos</figcaption>
+          </div>
+          <div class="testimonialCard p-4 shadow-sm bg-light">
+            <blockquote class="blockquote mb-2">
+              <p>“Os professores são super atenciosos e dedicados!”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-primary">Marina, 18 anos</figcaption>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="testimonials" class="testimonials section bgWhite" data-aos="fade-up">
-    <h2>Depoimentos</h2>
-    <div class="testimonialsWrapper">
-      <div class="testimonialCard">
-        <p class="quote">“O Uniplaner salvou minha rotina antes do vestibular!”</p>
-        <p class="author">– João, 17 anos</p>
+    </section>
+    <section id="download" class="cta section position-relative text-center text-white py-5" data-aos="fade-up">
+      <div class="container position-relative">
+        <h3 class="display-6 fw-bold mb-3">Não deixe pra depois!</h3>
+        <p class="lead mb-4">Baixe agora e transforme sua forma de estudar.</p>
+        <a class="btn btn-light btn-lg" href="#" role="button">Baixar agora <i class="fa-solid fa-download"></i></a>
       </div>
-      <div class="testimonialCard">
-        <p class="quote">“Fácil de usar e com conteúdo incrível. Recomendo!”</p>
-        <p class="author">– Ana, 19 anos</p>
-      </div>
-      <div class="testimonialCard">
-        <p class="quote">“A interface intuitiva me ajudou a manter tudo sob controle.”</p>
-        <p class="author">– Carlos, 20 anos</p>
-      </div>
-      <div class="testimonialCard">
-        <p class="quote">“Os professores são super atenciosos e dedicados!”</p>
-        <p class="author">– Marina, 18 anos</p>
-      </div>
-    </div>
-  </section>
-  <section id="download" class="cta" data-aos="fade-up">
-    <div class="ctaContainer">
-      <div class="ctaContent">
-        <h3>Não deixe pra depois!</h3>
-        <p>Baixe agora e transforme sua forma de estudar.</p>
-        <a class="btnDownload">Baixar agora <i class="fa-solid fa-download"></i></a>
-      </div>
-    </div>
-  </section>
-  <footer class="footer py-5" data-aos="fade-up">
+    </section>
+  </main>
+  <footer class="footer bg-dark text-light py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
-          <h5>Uniplaner</h5>
+          <h5 class="text-white">Uniplaner</h5>
           <p>O futuro em suas mãos. Organize seus estudos de forma simples e eficiente.</p>
-          <div class="socialIcons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div>
+            <a href="#" class="text-light me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-light me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-light" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <h5>Links Úteis</h5>
+          <h5 class="text-white">Links Úteis</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Aplicativo</a></li>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="https://wa.me/54984036584/?text=Ola" target="_blank">Contato</a></li>
+            <li><a href="#" class="text-secondary footer-link">Aplicativo</a></li>
+            <li><a href="#" class="text-secondary footer-link" >Sobre nós</a></li>
+            <li><a href="#" class="text-secondary footer-link">Blog</a></li>
+            <li>
+              <a class="text-secondary" href="https://wa.me/54984036584/?text=Ola" target="_blank" rel="noopener">
+                Contato
+              </a>
+            </li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h5>Newsletter</h5>
+          <h5 class="text-white">Newsletter</h5>
           <p>Receba novidades e dicas de estudo:</p>
-          <form class="newsletterForm">
+          <form class="newsletterForm" action="#" method="post" aria-label="Formulário de inscrição na newsletter">
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="Email" />
+              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="Seu e-mail" required />
               <button class="btn btn-primary" type="submit">Inscrever</button>
             </div>
           </form>
         </div>
       </div>
-      <hr class="mt-4" />
-      <p class="text-center small mb-0">© 2025 Uniplaner. Todos os direitos reservados.</p>
+      <hr class="mt-4 border-secondary" />
+      <p class="text-center small mb-0">&copy; 2025 Uniplaner. Todos os direitos reservados.</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
 </body>
 </html>
